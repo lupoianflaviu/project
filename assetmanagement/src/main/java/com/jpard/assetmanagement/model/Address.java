@@ -10,13 +10,12 @@ import javax.persistence.Id;
  * date 2017.11.01
  */
 @Entity
-public class Specification {
+public class Address {
 
     @Id
     @GeneratedValue
     private int id;
-    private String proccessor;
-    private String memory;
-    private String software;
-    private String generalInfo;
+    private String street;
+    private String city;
+    private String country;
 }
