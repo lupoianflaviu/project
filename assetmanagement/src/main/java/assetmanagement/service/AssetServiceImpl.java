@@ -1,4 +1,4 @@
-package com.jpard.assetmanagement.service;
+package assetmanagement.service;
 
 /**
  * @author flaviu.lupoian@jpard.com
