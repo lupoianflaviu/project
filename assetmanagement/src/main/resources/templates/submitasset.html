@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>HOTEL MANAGEMENT</h1>
+<h2>SUBMIT NEW ASSET</h2>
+<div class="btn-group">
+    <div class="btn-group">
+        <input type="button" value="All Assets" onclick="window.location.href='/assets'"/>
+        <input type="button" value="Add Asset" onclick="window.location.href='/assets/submit'"/>
+    </div>
+</div>
+<form action="#" th:action="@{/assets/submit}" method="post">
+    <p>Name: <input type="text" th:field="*{asset.name}"/></p>
+    <p>Model: <input type="text" th:field="*{asset.model}"/></p>
+    <p>Specification id: <input type="number" th:field="*{asset.specification.id}"/></p>
+    <p>Category: <input type="text" th:field="*{asset.category}"/></p>
+    <p>Employee id: <input type="number" th:field="*{asset.employee.id}"/></p>
+    <p>Location: <input type="text" th:field="*{asset.location}"/></p>
+    <p>Intervention id: <input type="number" th:field="*{asset.intervention.id}"/></p>
+    <p>Purchase Date: <input type="date" th:field="*{asset.purchaseDate}"/></p>
+    <p>Disposal Date: <input type="date" th:field="*{asset.disposalDate}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>

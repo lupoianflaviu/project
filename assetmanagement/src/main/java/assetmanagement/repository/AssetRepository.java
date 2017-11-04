@@ -16,4 +16,7 @@ public interface AssetRepository extends CrudRepository<Asset, Integer>{
 
     @Override
     <S extends Asset> S save(S s);
+
+    @Override
+    void delete(Integer id);
 }

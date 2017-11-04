@@ -8,4 +8,7 @@ public interface AddressRepository extends CrudRepository<Address, Integer> {
 
     @Override
     Iterable<Address> findAll();
+
+    @Override
+    Address findOne(Integer integer);
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>ASSET MANAGEMENT</h1>
+<h2>DELETE ASSET</h2>
+<div class="btn-group">
+    <input type="button" value="All Assets" onclick="window.location.href='/assets'"/>
+    <input type="button" value="Add Asset" onclick="window.location.href='/assets/submit'"/>
+</div>
+<form action="#" th:action="@{/assets/delete/{id}(id=${asset.id})}" method="post" id="formupdate">
+    <p>Id: <input type="number" th:field="*{asset.id}" disabled="disabled"/></p>
+    <p>Name: <input type="text" th:field="*{asset.name}" disabled="disabled"/></p>
+    <p>Model: <input type="text" th:field="*{asset.model}" disabled="disabled"/></p>
+    <p>Specification: <input type="number" th:field="*{asset.specification.id}" disabled="disabled"/></p>
+    <p>Category: <input type="text" th:field="*{asset.category}" disabled="disabled"/></p>
+    <p>Employee: <input type="number" th:field="*{asset.employee.id}" disabled="disabled"/></p>
+    <p>Location: <input type="text" th:field="*{asset.location}" disabled="disabled"/></p>
+    <p>Intervention: <input type="number" th:field="*{asset.intervention.id}" disabled="disabled"/></p>
+    <p>Purchase Date: <input type="date" th:field="*{asset.purchaseDate}" disabled="disabled"/></p>
+    <p>Disposal Date: <input type="date" th:field="*{asset.disposalDate}" disabled="disabled"/></p>
+    <p><input type="submit" value="Delete"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>

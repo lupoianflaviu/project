@@ -26,4 +26,9 @@ public class AssetServiceImpl implements AssetService {
     public <S extends Asset> S save(S s) {
         return this.assetRepository.save(s);
     }
+
+    @Override
+    public void delete(Integer id) {
+        this.assetRepository.delete(id);
+    }
 }

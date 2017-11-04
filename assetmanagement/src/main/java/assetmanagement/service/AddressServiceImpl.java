@@ -17,4 +17,9 @@ public class AddressServiceImpl implements AddressService {
     public Iterable<Address> findAll() {
         return addressRepository.findAll();
     }
+
+    @Override
+    public Address findOne(Integer integer) {
+        return this.addressRepository.findOne(integer);
+    }
 }

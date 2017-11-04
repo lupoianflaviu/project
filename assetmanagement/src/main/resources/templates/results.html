@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>ASSET MANAGEMENT</h1>
+<h2>ASSET DETAILS</h2>
+<div class="btn-group">
+    <input type="button" value="All Assets" onclick="window.location.href='/assets'"/>
+    <input type="button" value="Add Asset" onclick="window.location.href='/assets/submit'"/>
+</div>
+<h2>FOLLWOING ASSET HAS BEEN ADDED: </h2>
+<table>
+    <thead>
+    <tr>
+        <th>NAME</th>
+        <th>MODEL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${asset.name}">...</td>
+        <td th:text="${asset.model}">...</td>
+        <td><a th:href="@{/assets/{id}(id=${asset.id})}">Update</a></td>
+        <td><a th:href="@{/assets/delete/{id}(id=${asset.id})}">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="btn-group">
+    <input type="button" value="New Booking" onclick="window.location.href='/bookings/submit'"/>
+</div>
+</body>
+</html>

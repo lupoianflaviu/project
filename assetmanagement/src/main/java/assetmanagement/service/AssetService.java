@@ -9,4 +9,6 @@ public interface AssetService {
     Asset findOne(Integer id);
 
     <S extends Asset> S save(S s);
+
+    void delete(Integer id);
 }
