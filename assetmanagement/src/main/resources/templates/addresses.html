@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Saved Bookings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<h1>ASSET MANAGEMENT</h1>
+<h2>VIEW ALL ADDRESSES</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>CITY</th>
+        <th>STREET</th>
+        <th>COUNTRY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="address : ${addresses}">
+        <tr>
+            <td th:text="${address.id}">...</td>
+            <td th:text="${address.street}">...</td>
+            <td th:text="${address.city}">...</td>
+            <td th:text="${address.country}">...</td>
+            <td><a th:href="@{/addresses/{id}(id=${address.id})}">Update</a></td>
+            <td><a th:href="@{/addresses/delete/{id}(id=${address.id})}">Delete</a></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>
