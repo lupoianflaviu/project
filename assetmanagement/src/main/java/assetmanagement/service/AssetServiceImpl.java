@@ -16,4 +16,14 @@ public class AssetServiceImpl implements AssetService {
     public Iterable<Asset> findAll() {
         return this.assetRepository.findAll();
     }
+
+    @Override
+    public Asset findOne(Integer id) {
+        return this.assetRepository.findOne(id);
+    }
+
+    @Override
+    public <S extends Asset> S save(S s) {
+        return this.assetRepository.save(s);
+    }
 }

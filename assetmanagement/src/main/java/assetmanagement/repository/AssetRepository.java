@@ -6,8 +6,14 @@ import org.springframework.stereotype.Repository;
 import assetmanagement.model.Asset;
 
 @Repository
-public interface AssetRepository extends CrudRepository<Asset, Long>{
+public interface AssetRepository extends CrudRepository<Asset, Integer>{
 
     @Override
     Iterable<Asset> findAll();
+
+    @Override
+    Asset findOne(Integer id);
+
+    @Override
+    <S extends Asset> S save(S s);
 }
