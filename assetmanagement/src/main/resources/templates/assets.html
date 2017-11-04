@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Saved Bookings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<h1>ASSET MANAGEMENT</h1>
+<h2>VIEW ALL ASSETS</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>MODEL</th>
+        <th>SPECIFICATION</th>
+        <th>CATEGORY</th>
+        <th>OWNER</th>
+        <th>LOCATION</th>
+        <th>INTERVENTION</th>
+        <th>PURCHASE DATE</th>
+        <th>DISPOSAL DATE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="asset : ${assets}">
+        <tr>
+            <td th:text="${asset.id}">...</td>
+            <td th:text="${asset.name}">...</td>
+            <td th:text="${asset.model}">...</td>
+            <td th:text="${asset.specification}">...</td>
+            <td th:text="${asset.category}">...</td>
+            <td th:text="${asset.employee}">...</td>
+            <td th:text="${asset.location}">...</td>
+            <td th:text="${asset.intervention}">...</td>
+            <td th:text="${asset.purchaseDate}">...</td>
+            <td th:text="${asset.disposalDate}">...</td>
+            <td><a th:href="@{/assets/{id}(id=${asset.id})}">Update</a></td>
+            <td><a th:href="@{/assets/delete/{id}(id=${asset.id})}">Delete</a></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>

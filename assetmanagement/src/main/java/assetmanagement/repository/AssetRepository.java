@@ -8,5 +8,6 @@ import assetmanagement.model.Asset;
 @Repository
 public interface AssetRepository extends CrudRepository<Asset, Long>{
 
-
+    @Override
+    Iterable<Asset> findAll();
 }

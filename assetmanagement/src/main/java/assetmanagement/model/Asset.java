@@ -26,6 +26,8 @@ public class Asset {
     private Employee employee;
     private String location;
     private Date disposalDate;
+    @OneToOne
+    private Intervention intervention;
 
     public int getId() {
         return id;
@@ -99,9 +101,18 @@ public class Asset {
         this.disposalDate = disposalDate;
     }
 
+    public Intervention getIntervention() {
+        return intervention;
+    }
+
+    public void setIntervention(Intervention intervention) {
+        this.intervention = intervention;
+    }
+
     @Override
     public String toString() {
         return "Asset{" + "id=" + id + ", name='" + name + '\'' + ", model='" + model + '\'' + ", category=" + category + ", specification=" + specification
-                + ", purchaseDate=" + purchaseDate + ", employee=" + employee + ", location='" + location + '\'' + ", disposalDate=" + disposalDate + '}';
+                + ", purchaseDate=" + purchaseDate + ", employee=" + employee + ", location='" + location + '\'' + ", disposalDate=" + disposalDate
+                + ", intervention=" + intervention + '}';
     }
 }

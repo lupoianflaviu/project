@@ -57,7 +57,7 @@ public class Specification {
 
     @Override
     public String toString() {
-        return "Specification{" + "id=" + id + ", proccessor='" + proccessor + '\'' + ", memory='" + memory + '\'' + ", software='" + software + '\''
-                + ", generalInfo='" + generalInfo + '\'' + '}';
+        return "proccessor='" + proccessor + '\'' + ", memory='" + memory + '\'' + ", software='" + software + '\''
+                + ", generalInfo='" + generalInfo + '\'';
     }
 }

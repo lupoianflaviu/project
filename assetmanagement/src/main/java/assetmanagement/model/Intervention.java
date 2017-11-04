@@ -15,9 +15,9 @@ public class Intervention {
     @GeneratedValue
     private int id;
     private Date date;
-    @Type(type="yes_no")
+    @Type(type = "yes_no")
     private Boolean isRepaired;
-    @Type(type="yes_no")
+    @Type(type = "yes_no")
     private Boolean isReplaced;
     private String details;
 
@@ -63,7 +63,6 @@ public class Intervention {
 
     @Override
     public String toString() {
-        return "Intervention{" + "id=" + id + ", date=" + date + ", isRepaired=" + isRepaired + ", isReplaced=" + isReplaced + ", details='" + details + '\''
-                + '}';
+        return "date=" + date + ", isRepaired=" + isRepaired + ", isReplaced=" + isReplaced + ", details='" + details + '\'';
     }
 }
